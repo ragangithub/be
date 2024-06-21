@@ -10,7 +10,7 @@ import PrivateRoutes from "./utils/PrivateRoute";
 
 function App() {
   return (
-    <div className="container">
+    <>
       <NavBar />
 
       <Routes>
@@ -21,7 +21,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/" element={<HomePage />} />
       </Routes>
-    </div>
+    </>
   );
 }
 
