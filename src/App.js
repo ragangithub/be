@@ -2,17 +2,21 @@ import "./App.css";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavbarPage";
-// import Createback from "./components/CreateBacktestPage";
+import CreatebackPage from "./components/CreateBacktestPage";
 import SignUpPage from "./components/SignUpPage";
 import LoginPage from "./components/LoginPage";
 import HomePage from "./components/HomePage";
+import PrivateRoutes from "./utils/PrivateRoute";
 
 function App() {
   return (
     <div className="container">
       <NavBar />
+
       <Routes>
-        {/* <Route path="/createbacktest" element={<Createback />} /> */}
+        <Route element={<PrivateRoutes />}>
+          <Route path="/createbacktest" element={<CreatebackPage />} />
+        </Route>
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/" element={<HomePage />} />

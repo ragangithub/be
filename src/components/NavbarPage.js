@@ -10,7 +10,7 @@ const LoggedInLinks = () => {
         </Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link  active" to="/create_recipe">
+        <Link className="nav-link  active" to="/createbacktest">
           Create Backtest
         </Link>
       </li>
